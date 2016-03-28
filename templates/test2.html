@@ -12,27 +12,27 @@
 <tr>
 <tr>
 <td>Regular</td>
-<td>{{HourlyRate}}</td>
-<td>{{Reg_Hours}}</td>
-<td>{{Reg_Pay}}</td>
+	<td>{{entry.regular['rate'] }}</td>
+	<td>{{entry.regular['hours']}}</td>
+	<td>{{entry.regular['pay']  }}</td>
 <tr>
 <tr>
 <td>Overtime</td>
-<td>{{Over_Time_Rate}}</td>
-<td>{{Over_Time_Hours}}</td>
-<td>{{Over_Time_Pay}}</td>
+	<td>{{entry.overtime['rate']}}</td>
+	<td>{{entry.overtime['hours']}}</td>
+	<td>{{entry.overtime['pay']}}</td>
 <tr>
 <tr>
 <td>Double time</td>
-<td>{{Double_Time_Rate}}</td>
-<td>{{Double_Time_Hours}}</td>
-<td>{{Double_Time_Pay}}</td>
+	<td>{{entry.doubletime['rate']}}</td>
+	<td>{{entry.doubletime['hours']}}</td>
+	<td>{{entry.doubletime['pay']}}</td>
 <tr>
 <tr>
 <td>TotalPay</td>
 <td></td>
-<td>{{Total_Hours}}</td>
-<td>{{Total_Pay}}</td>
+<td>{{entry.total['hours']}}</td>
+<td>{{entry.total['pay']}}</td>
 <tr>
 </table></body>
 </html>
