@@ -8,10 +8,10 @@ app = Flask(__name__)
 
 # Make the WSGI interface available at the top level so wfastcgi can get it.
 wsgi_app = app.wsgi_app
-
+   
 from routes import *
 
 #run server and this is the ip server
 if __name__ == '__main__':
     import os
-    app.run(host=os.environ['IP'],port=int(os.environ['PORT']))
+    app.run(host='0.0.0.0',port=8080, debug=True)
