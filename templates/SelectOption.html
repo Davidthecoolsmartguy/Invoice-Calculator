@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function stopRKey(evt) { 
+  var evt = (evt) ? evt : ((event) ? event : null); 
+  var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null); 
+  if ((evt.keyCode == 13) && (node.type=="text"))  {return false;} 
+} 
+
+document.onkeypress = stopRKey; 
+
+
+    function show() { 
+        if(document.getElementById('option1').style.display=='none') { 
+            document.getElementById('option2').style.display='none';
+            document.getElementById('option1').style.display='block'; 
+            
+        } 
+     
+        
+        return false;
+    } 
+    
+    
+    
+       function show2() { 
+        if(document.getElementById('option2').style.display=='none') { 
+            document.getElementById('option1').style.display='none';
+            document.getElementById('option2').style.display='block'; 
+        } 
+   
+        return false;
+    } 
+	
+	
+</script>
+
+
+</head>
+<body>
+
+
+<div align="center"><br>
+
+<button onclick=show() type="button">Option1!</button>
+<button onclick=show2() type="button">Option2!</button>
+
+
+
+
+
+</div>
+
+
+    <div id="option1" style="display:none;">
+        
+	<form method="post">
+    	
+    		<div>
+    			<label for="GuranteedRate">Guranteed Rate</label>
+    			<input type="text" class="form-control" name="GuranteedRate" />
+    		</div>
+    		
+    		<div>
+    			<label for="GuranteedHours">Guranteed Hours</label>
+    			<input type="text" class="form-control" name="GuranteedHours" />
+    		</div>
+    		
+    		<div>
+    			<label for="HoursWorked">Actual Hours Worked</label>
+    			<input type="text" class="form-control" name="HoursWorked" />
+    		</div>
+    	
+    		<div>
+    			<input type="submit" name="submit" value="Submit Option1">
+    		</div>
+    	</form> 
+	
+
+        
+
+    </div>
+    
+    
+
+  <div id="option2" style="display:none;">
+      
+        
+ 	<form method="post">
+    	
+    		<div>
+    			<label for="Hours">Hours</label>
+    			<input type="text" class="form-control" name="Hours" />
+    		</div>
+    		
+    		<div>
+    			<label for="HourlyRate">HourlyRate</label>
+    			<input type="text" class="form-control" name="HourlyRate" />
+    		</div>
+    		
+    
+    	
+    		<div>
+    			<input type="submit" name="submit" value="Submit Option2">
+    		</div>
+    	</form> 
+    </div>	 
+
+</body>
+</html>
+
+
